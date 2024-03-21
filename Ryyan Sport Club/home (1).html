@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sport-Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</head>
+
+<style>
+  a {
+    text-decoration: none;
+  }
+
+  #a1 {
+    background-image: linear-gradient(115deg, #00093c, #2d0b00);
+
+
+  }
+
+  #under {
+    background-color: #2cd5ff;
+    margin: 1px;
+    ;
+    width: 100px;
+    text-align: center;
+    border-radius: 25px;
+    background-image: linear-gradient(to left, rgb(41, 41, 41), #888888, rgb(41, 41, 41));
+    background-size: 400%;
+    transition: 0.8s;
+  }
+  #under1 {
+    background-color: #2cd5ff;
+    
+    ;
+    width: 100px;
+    text-align: center;
+    border-radius: 25px;
+    background-image: linear-gradient(to left, rgb(41, 41, 41), #888888, rgb(41, 41, 41));
+    background-size: 400%;
+    transition: 0.8s;
+    border: 1px solid transparent;
+    padding: 0.8rem 0.95rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    color: #ccc;
+  }
+  #under1:hover {
+    background-position: right;
+    box-shadow: 0px 0px 10px #d0d1d1;
+  }
+
+  #under:hover {
+    background-position: right;
+    box-shadow: 0px 0px 10px #d0d1d1;
+  }
+
+
+  #navbarDropdownMenuLink {
+    background-color: #2cd5ff;
+    margin: 1px;
+    width: 100px;
+    text-align: center;
+    border-radius: 25px;
+    background-image: linear-gradient(to left, rgb(41, 41, 41), #888888, rgb(41, 41, 41));
+    background-size: 400%;
+    transition: 0.8s;
+  }
+
+  #navbarDropdownMenuLink:hover {
+    background-position: right;
+    box-shadow: 0px 0px 10px #d0d1d1;
+  }
+
+
+  .dropdown-item {
+    background-size: 400%;
+    background-image: linear-gradient(to left, rgb(41, 41, 41), #888888, rgb(41, 41, 41));
+    transition: 0.8s;
+    border-radius: 25px;
+    width: 100px;
+    text-align: center;
+    margin-bottom: 3px;
+    color:white ;
+  }
+
+  .dropdown-item:hover {
+    color: #1e2125;
+    background-position: right;
+    box-shadow: 0px 0px 10px #d0d1d1;
+  }
+
+
+  .dropdown-menu {
+    position: absolute;
+    z-index: 1000;
+    display: none;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: transparent;
+    background-clip: padding-box;
+    border: none;
+
+  }
+
+  .carousel-caption {
+    position: absolute;
+    right: 3%;
+    bottom: 1.25rem;
+    left: 70%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: left;
+    top: 31%;
+  }
+
+  .bg-dark {
+    background-image: linear-gradient(291deg, #00093c, #2d0b00);
+    border-top-left-radius: 125px;
+
+  }
+  .bg-dark1 {
+    background-image: linear-gradient(291deg, #5667c9, #2d0b00);
+    
+
+  }
+
+  .container.h-100.p-4 {
+    margin-bottom: -35px;
+  }
+
+  .my-lg-2 {
+    transition: 0.5s;
+  }
+
+  .lispan {
+    transition: 0.2s;
+    text-decoration: none;
+    list-style: none;
+  }
+
+  .lispan {
+    color: rgb(255, 255, 255);
+  }
+
+  .lispan:hover {
+    color: rgb(8, 83, 148);
+    translate: 10px;
+  }
+
+  .my-lg-2:hover {
+    translate: 10px;
+  }
+
+
+  .news {
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+    margin-top: 30px;
+  }
+
+  .news .bi {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+
+  .news input {
+    width: 100%;
+    background: transparent;
+    color: #ccc;
+    border: none;
+    outline: none;
+  }
+
+  .news button {
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .news button .bi {
+    color: #ccc;
+    font-size: 19px;
+  }
+
+.social-icon{
+ align-items: center;
+ justify-content: center;
+  font-size: 33px;
+  margin-left: 30px;
+  
+  cursor: pointer;
+  line-height: 35px;
+}
+ .underline12{
+  width: 100%;
+  height: 5px;
+  background-color: rgb(255, 254, 254);
+  border-radius: 3px;
+ position: sticky;
+ overflow: hidden;
+ }
+
+ .underline12 span{
+  width: 15px;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  border-radius: 3px;
+ position: absolute;
+ top: 0;
+ left: 10px;
+ animation: moving 2s linear infinite;
+ }
+@keyframes moving{
+  0%{
+    left: -20px;
+
+  }
+  100%{
+    left: 100%;
+    
+  }
+}
+.hover{
+  overflow: hidden;
+}
+.imgjhg{
+  display: block;transition: 2s;
+}
+.hover:hover .imgjhg{
+  transform: scale(1.2)
+}
+.hover1{
+  overflow: hidden;
+}
+.imgjhg1{
+  display: block;transition: 2s;box-shadow: 2px 2px 10px #444444;
+}
+.hover1:hover .imgjhg1{
+  transform: scale(1.2);box-shadow: 2px 2px 10px #444444;
+}
+
+.container-first{background-image: url(img/black\ background.jpg);background-position: cover ;background-size: cover; display: block;
+margin-top: -48px;}
+.container-sec{
+  background-image: url(img/background\ 2.png);background-position: cover;background-size: cover;
+  
+}
+
+#footbal{
+  animation: name 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+
+}
+@keyframes name
+{
+  to{margin-right: 0rem; margin-bottom: 0rem;  }
+  from{margin-left: -6rem;
+    margin-top: 11rem;  }
+}
+.lin2{
+  -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 3px #070705;
+    font-weight:bolder;font-size: 60px;
+}
+.lin3{
+  -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px #6b6b66;
+    font-weight:bolder;font-size: 60px;
+}
+.lin4{
+  -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px #ffff00;
+    font-weight:bolder;font-size: 70px;
+}
+.lin5{ -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px #6b6b66;
+    font-weight:bolder;font-size: 60px;}
+.container-third{
+  background-color: #1e2125;
+  
+}
+.head
+{position: sticky;
+top: 120px;}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 350px;
+    word-wrap: break-word;
+    background-color: #fff0;
+    background-clip: border-box;
+    border: none;
+    border-radius: 0.25rem;
+}
+.row {
+    --bs-gutter-x: 2;}
+
+    @media (max-width:  576px)
+     { .lin2{
+  -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 3px #070705;
+    font-weight:bolder;font-size: 40px;
+}
+.lin3{
+  -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px #6b6b66;
+    font-weight:bolder;font-size: 40px;
+}
+.lin4{
+  -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px #ffff00;
+    font-weight:bolder;font-size: 50px;
+}
+.lin5{ -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px #6b6b66;
+    font-weight:bolder;font-size: 40px;}
+      
+      
+      
+      .overflow{overflow: hidden;}
+}
+.container-forth{background-image: url(img/background\ 3.png);background-position: cover;background-size: cover;}
+.image-162 {
+    width: 100%;
+}
+@media (min-width: 1200px) 
+{#a11{width: 355px; height: 501px; margin: auto;} 
+#a12{width: 355px; height: 501px; margin: auto;} 
+#a13{width: 355px; height: 501px;margin: auto;} 
+#a14{width: 345px;margin: auto;}
+#a15{width: 345px;margin: auto;}
+}
+@media (min-width: 992px) 
+{
+  
+#a12{    width: 469px;
+    height: 635px;} 
+    #a15{width: 450px;margin: auto;}
+}
+#a14{margin: auto;}
+#a15{margin: auto;}
+.air{    position: fixed;
+    bottom: 19px;
+    top: 23;
+    right: 57px;
+    font-size: xxx-large;
+    cursor: pointer;}
+    .air1{    position: fixed;
+    bottom: 179px;
+    top: 23;
+    left: 57px;
+    font-size: xxx-large;
+    cursor: pointer;}
+    a.back-to-top {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    right: 20px;
+    bottom: 20px;
+}
+
+</style>
+
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark" id="a1">
+    <div class="container-fluid " id="airdown">
+      <a class="navbar-brand" href="#"><img src="img/icon.png" width="130px"  height="30px"></a>
+      <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse   justify-content-center" id="navbarNavDropdown">
+        <ul class="navbar-nav text-light">
+          <li class="nav-item">
+            <a class="nav-link active " aria-current="page" id="under" href="home (1).html">Home</a>
+          </li>
+          <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Sport
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="indoor.html" >Indoor</a></li>
+
+              <li><a class="dropdown-item" href="outdoor.html">Outdoor</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " id="under" href="gallery.html">gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="under" href="contect.html">Contact Us</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/soccer-slider.jpg" class="d-flex w-100 " alt="..." >
+       
+
+        <div class="carousel-caption d-none d-md-block">
+          <h5  >The Sport Club</h5>
+          <p>Sports play a major part in improving our physical and mental fitness</p>
+          <a href="feedback.html"> <button type="button" class="btn btn-light">Feedback</button></a>
+          <a href="member.html"><button type="button" class="btn btn-dark">Membership</button></a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="img/img (2).jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>The Sport Club</h5>
+          <p>Sports play a major part in improving our physical and mental fitness</p>
+          <a href="feedback.html"> <button type="button" class="btn btn-light">Feedback</button></a>
+          <a href="member.html"><button type="button" class="btn btn-dark">Membership</button></a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="img/img (3).jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="text-dark">The Sport Club</h5>
+          <p class="text-dark">Sports play a major part in improving our physical and mental fitness</p>
+          <a href="feedback.html"> <button type="button" class="btn btn-light">Feedback</button></a>
+          <a href="member.html"><button type="button" class="btn btn-dark">Membership</button></a>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+<div class="container-first">
+<div class="container">
+  <h2 class="h1 text-center text-light my-5 pt-5">Welcome to <span class="fw-bold text-warning">Sport Club</span></h1>
+<div class="row ">
+  <div class="col-lg-6 col-md-12 col-sm-12 col-12  text-light  fs-5">
+  <p  >Sport is one of those things that you’ll have to go a long way to find somebody that has no interest in. Whether it’s football, cricket, rugby, swimming or athletics, most people will have some sort of interest in a sport, be it watching or taking part.</p>
+  <p class="text-warning fw-bold">And because of this, there are countless numbers of sport blogs on the internet for you to keep up with your chosen sport on.</p>
+  <p>There are many quality sports blogs out there; general sites that cover a wide range of sports and sport-specific blogs that will focus on one individual sport and specialise in the ins and outs of the that sport</p>
+  <p class="text-warning fw-bold">We’ve compiled a list of the best sport blogs for you to check out and enjoy. We’ll cover a range of sports and also include a few general sport blogs too.</p> 
+</div>
+  <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+    <div class="hover"><img src="img/img (10)-min.jpg" width="470rem" class="  imgjhg" ></div>
+    </div>
+</div>
+<br>
+</div>
+</div>
+<div class="container-sec">
+  <div class="container-fluid">
+  <div class="row">
+    <div class="overflow col-xl-4 col-lg-6 col-md-6 d-flex  ">
+      <img src="img/ben-weber-r-krWscXjvQ-unsplash-removebg-preview.png" class="float-start " width="400rem" >
+      <img src="img/football.png" width="105rem" height="85rem" id="footbal" class="align-self-center"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ">
+    </div>
+
+    
+      <div class="col-xl-4 col-lg-6 col-md-6 mb-4 mb-md-0">
+        <h2 class="lin2  text-center  fw-bold mt-5">THE SPORT OF <span class="lin3"></span> </h2>
+        <p style="white-space:pre-wrap;    text-align: -webkit-center;padding-top: 6rem; font-size: 16;" class="line4">If you can’t join us at <strong><em>SportClub</em></strong> for the non-stop action in person, we’ve got you covered! Scout out our sports inspired menu and get it to your couch in time for tip-off, kick-off, or puck drop. Delivery available on your favorite food app. <strong>Catering a party?</strong> Let us do the work &amp; deliver straight to your door.</p>
+        
+        </div>
+        <div class="col-xl-4 col-lg-6 col-md-12 ">
+          <img src="img/nat.png" class="float-end" width="470rem">
+          </div>
+    </div>
+   
+  </div>
+  </div>
+<div class="container-third">
+<div class="row">
+  <div class="col justify-content-start ms-5  my-5 text-lg-start text-md-center text-sm-start text-light ">
+    <div class="head">
+<h1 class=" fs-1">ALL <br class="pt-1" >
+ <span class="lin4">ACTIVITIES </span> <br class="pt-1">
+  WHAT ARE YOU <br> LOOKING FOR</h1>
+  
+<p class="pt-3 " >Combining different activities is essential <br> to maintain motivation and enjoy your sports <br> routine to the fullest.</p>
+ <a href="member.html"><button type="button" class="btn btn-outline-warning btn-lg">associate</button></a>
+
+</div>
+
+
+  </div>
+  <div class="col d-lg-flex  d-md-flex text-align     text-light ">
+    <div class="col  ms-sm-5 m-5 ms-md-0 ">
+      
+      <div class="card   " style="width: 18rem;">
+        <img src="img/act1.png" class="card-img-top act   mt-5"  alt="...">
+        <div class="card-body">
+          <p class="card-text">Work strength and endurance, developing all muscle groups. Prevent injuries and improve your quality of life. We have +300 gyms equipped with the latest technology.</p>
+        </div>
+      </div>
+      
+      <div class="card " style="width: 18rem;">
+        <img src="img/act2.png" class="card-img-top act   mt-5"  alt="...">
+        <div class="card-body">
+          <p class="card-text">Enjoy all the benefits of swimming, improve your respiratory and cardiovascular system. +30 indoor and outdoor pools.  </p>
+        </div>
+      </div>
+
+      <div class="card " style="width: 18rem;">
+        <img src="img/act3.png" class="card-img-top act   mt-5"  alt="...">
+        <div class="card-body">
+          <p class="card-text">Staying active is synonymous with health, there are no more excuses. Hundreds of activities to stimulate your body and slow down the passage of time.</p>
+        </div>
+      </div>
+
+      <div class="card " style="width: 18rem;">
+        <img src="img/act4.png" class="card-img-top act mt-5"  alt="...">
+        <div class="card-body">
+          <p class="card-text">Activities for children, while you train your child can also have fun and be on the move.</p>
+        </div>
+      </div>
+
+
+    </div>
+
+
+    <div class="col ms-sm-5 m-5 ms-md-0 align-self-center ">
+      <div class="card " style="width: 18rem;">
+        <img src="img/act5.png" class="card-img-top act   mt-5"  alt="...">
+        <div class="card-body">
+          <p class="card-text">Train outdoors in clubs and outdoor spaces. Access the full schedule of activities</p>
+        </div>
+      </div>
+
+      <div class="card " style="width: 18rem;">
+        <img src="img/act6.png" class="card-img-top act   mt-5"  alt="...">
+        <div class="card-body">
+          <p class="card-text">Breathe, relax your mind and improve your joint mobility. Pilates, yoga, stretching and many more activities, aimed at finding your integral well-being.</p>
+        </div>
+      </div>
+
+      <div class="card  " style="width: 18rem;">
+        <img src="img/act7.png" class="card-img-top act mt-5"  alt="...">
+        <div class="card-body">
+          <p class="card-text">WorkClub, a new concept that combines part of your daily activities in one place</p>
+        </div>
+      </div>
+    </div>
+  
+</div> 
+</div>
+<img src="https://assets-global.website-files.com/6006f5bf87d96d2131258ef0/6282a9763222b146609b2fcd_FONDO%20entre%20beneficios%20y%20planes%20PNG.png" loading="lazy" sizes="100vw" srcset="https://assets-global.website-files.com/6006f5bf87d96d2131258ef0/6282a9763222b146609b2fcd_FONDO%20entre%20beneficios%20y%20planes%20PNG-p-500.png 500w, https://assets-global.website-files.com/6006f5bf87d96d2131258ef0/6282a9763222b146609b2fcd_FONDO%20entre%20beneficios%20y%20planes%20PNG-p-800.png 800w, https://assets-global.website-files.com/6006f5bf87d96d2131258ef0/6282a9763222b146609b2fcd_FONDO%20entre%20beneficios%20y%20planes%20PNG-p-1080.png 1080w, https://assets-global.website-files.com/6006f5bf87d96d2131258ef0/6282a9763222b146609b2fcd_FONDO%20entre%20beneficios%20y%20planes%20PNG-p-1600.png 1600w, https://assets-global.website-files.com/6006f5bf87d96d2131258ef0/6282a9763222b146609b2fcd_FONDO%20entre%20beneficios%20y%20planes%20PNG.png 1920w" id="main" alt="" class="image-162">
+</div>
+
+<div class="container-forth">
+<div class="container">
+  <h1 class="text-uppercase text-center fs-1 fw-bolder" >top of sports </h1>
+  <h1 class="text-uppercase text-center"> <span class="lin5"> person</span>  </h1>
+  <div class="card-group">
+    <div class=" card">
+      <div class="hover1"><img src="img/Lionel-Mess.jpg" class="imgjhg1 card-img-top" id="a11" alt="..."></div>
+      
+      <div class="card-body " id="a14">
+        <h3 class="card-title">Lionel Messi</h3>
+        <p class="card-text" >Argentine-born football (soccer) player who has been named the world's best men's player</p>
+        <a href="https://en.wikipedia.org/wiki/Lionel_Messi" id="under1" >Go somewhere</a>
+      </div>
+      
+    </div>
+    <div class="card" >
+      <div class="hover1"><img src="img/khabib.jpg" class="imgjhg1 card-img-top" id="a12" alt="..."></div>
+      <div class="card-body"id="a15" >
+        <h3 class="card-title">Khabib</h3>
+       
+        <p class="card-text " >He is the most-followed Russian on Instagram, with more than 34 million followers as of December 2022.</p>
+        <a href="https://en.wikipedia.org/wiki/Khabib_Nurmagomedov" id="under1">Go somewhere</a>
+      </div>
+     
+    </div>
+    <div class="card "  >
+      <div class="hover1"><img src="img/Cristiano_Ronaldo.jpg" class="imgjhg1 card-img-top" id="a13" alt="..."></div>
+      <div class="card-body" id="a14">
+        <h3 class="card-title">Cristiano Ronaldo</h3>
+        <p class="card-text" >He was able to mesmerize opponents with a sleight of foot that made sufficient space for openings in opposing defenses.</p>
+        <a href="https://en.wikipedia.org/wiki/Cristiano_Ronaldo"   id="under1">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+</div>
+
+  <footer class="bg-dark text-center text-light text-lg-start">
+    <a href="#" ><i class="air bi bi-arrow-up-circle-fill" ></i></a>
+    <a href="#airup"><i class="air1 bi bi-arrow-down-circle-fill" ></i></a>
+    <div class="container h-100 p-4">
+      <!--Grid row-->
+      <div class="row mt-3 my-">
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0 ">
+          <h5 class="text-uppercase text-center  "><img src="img/icon.png" width="130px" height="30px"></h5>
+          <p class="fs-6 ">Sports clubs range from organisations  members play together, unpaid, and may play other
+            similar clubs on occasion, watched mostly by family and friends</p>
+
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0  ">
+          <div class=" d-lg-flex justify-content-center"><i class="bi bi-buildings text-center"></i>
+            <h5 class="text-uppercase mb-0 ">Office <div class="underline12"><span></span></div></h5>
+          </div>
+
+
+          <ul class="list-unstyled lh-1 pt-2 ">
+            <li>
+              <h6 id="airup" >Address</h6>
+            </li>
+            <li>
+              <P>Zamzama Boulevard , DHA Phase 5, Karachi</P>
+            </li>
+            <li>
+              <h6>Phone</h6>
+            </li>
+            <li>
+              <p> (021)37130277</p>
+            </li>
+            <li>
+              <h6>Email</h6>
+            </li>
+            <li>
+              <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">Hamzasiddiqui1317@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 text-center mb-md-0">
+          <div class="d-lg-flex justify-content-center">
+            <i class="bi bi-link-45deg fs-5"></i>
+            <h5 class="text-uppercase ">Links <div class="underline12"><span></span></div></h5>
+          </div>
+
+
+          <ul class="list-unstyled lh-lg my-lg-3 ">
+            <li class="my-lg-2">
+              <a href="home (1).html"><span class="lispan">Home</span></a>
+            </li>
+            <li class="my-lg-2">
+              <a href="gallery.html"><span class="lispan">Gallery</span></a>
+            </li>
+            <li class="my-lg-2">
+              <a href="contect.html"><span class="lispan"> Contact Us</span></a>
+            </li>
+            <li class="my-lg-2">
+              <a href="feedback.html"><span class="lispan">Feedback</span></a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <div class="d-lg-flex justify-content-center">
+          <h5 class="text-uppercase">Newsletter <div class="underline12"><span></span></div></h5></div>
+          <form class="news">
+            <i class="bi bi-envelope"></i>
+            <input type="email" placeholder="Enter Your Email " required>
+            <button type="submit"> <i class="bi bi-arrow-right-short"></i></button>
+
+
+          </form>
+          <div class="social-icon">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-pinterest"></i>
+            <i class="bi bi-github"></i>
+            <i class="bi bi-telegram"></i>
+
+
+          </div>
+
+
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright-All Rights Reserved |
+      <a class="text-dark" href="#">Powder by XStak</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12">
+  
+
+</script>
+<script>
+  var typingEffect = new Typed(".lin3",{
+    strings : ["CELEBRATION!" , "PHYSICAL ACTIVITY" , "ACTIVE RECREATION"],
+    loop : true,
+    typeSpeed : 100,
+    backSpeed : 80,
+    backDelay : 1500
+
+  });
+
+  
+</script>
+
+</body>
+
+</html>

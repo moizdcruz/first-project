@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport-Feedback</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+    
+    <style> 
+    a{text-decoration: none;}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 2vh;
+
+  align-items: center;
+  justify-content: center;
+
+  background-color: #716262;
+  size: 900px;
+}
+.contaner {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.contaner header {
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  text-align: center;
+}
+.contaner .form {
+  margin-top: 30px;
+}
+.form .input-box {
+  width: 100%;
+  margin-top: 20px;
+}
+.input-box label {
+  color: rgb(0, 0, 0);
+}
+.form :where(.input-box input, .select-box,) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+.input-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.form .column {
+  display: flex;
+  column-gap: 15px;
+}
+.form .gender-box {
+  margin-top: 20px;
+}
+.gender-box h3 {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.form :where(.gender-option, .gender) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+.form .gender {
+  column-gap: 5px;
+}
+.gender input {
+  accent-color: rgb(0, 0, 0);
+}
+.form :where(.gender input, .gender label) {
+  cursor: pointer;
+}
+.gender label {
+  color: #707070;
+}
+.address :where(input, .select-box) {
+  margin-top: 15px;
+}
+.select-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #707070;
+  font-size: 1rem;
+}
+.form button {
+  height: 55px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: rgb(130, 106, 251);
+}
+.form button:hover {
+  background: rgb(88, 56, 250);
+}
+     /* FEEDBACK COLOUM */
+     
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;  
+  border: 1px solid #ccc; 
+  border-radius: 8px; 
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+  resize: vertical 
+}
+
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+.contaner {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+     /* EMOJI CSS */
+.body {
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: sans-serif;
+  }
+  
+  h1,
+  p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+  }
+  
+  .app {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    
+  }
+  .contaner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .item {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+  }
+  .radio {
+    display: none;
+  }
+  .radio ~ span {
+    font-size: 3rem;
+    filter: grayscale(100);
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .radio:checked ~ span {
+    filter: grayscale(0);
+    font-size: 4rem;
+  }
+  
+
+@media screen and (max-width: 500px) {
+  .form .column {
+    flex-wrap: wrap;
+  }
+  .form :where(.gender-option, .gender) {
+    row-gap: 15px;
+  }
+}
+
+
+a:hover {
+    color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+a {
+    color: #3b3d40;
+    text-decoration: underline;
+}
+
+  #a1 {
+    background-image: linear-gradient(115deg, #00093c, #2d0b00);
+
+
+  }
+
+  #under {
+    background-color: #2cd5ff;
+    margin: 1px;
+    ;
+    width: 100px;
+    text-align: center;
+    border-radius: 25px;
+    background-image: linear-gradient(to left, rgb(41, 41, 41), #888888, rgb(41, 41, 41));
+    background-size: 400%;
+    transition: 0.8s;
+  }
+  #under1 {
+    background-color: #2cd5ff;
+    
+    ;
+    width: 100px;
+    text-align: center;
+    border-radius: 25px;
+    background-image: linear-gradient(to left, rgb(41, 41, 41), #888888, rgb(41, 41, 41));
+    background-size: 400%;
+    transition: 0.8s;
+    border: 1px solid transparent;
+    padding: 0.8rem 0.95rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    color: #ccc;
+  }
+  #under1:hover {
+    background-position: right;
+    box-shadow: 0px 0px 10px #d0d1d1;
+  }
+
+  #under:hover {
+    background-position: right;
+    box-shadow: 0px 0px 10px #d0d1d1;
+  }
+
+
+  #navbarDropdownMenuLink {
+    background-color: #2cd5ff;
+    margin: 1px;
+    width: 100px;
+    text-align: center;
+    border-radius: 25px;
+    background-image: linear-gradient(to left, rgb(41, 41, 41), #888888, rgb(41, 41, 41));
+    background-size: 400%;
+    transition: 0.8s;
+  }
+
+  #navbarDropdownMenuLink:hover {
+    background-position: right;
+    box-shadow: 0px 0px 10px #d0d1d1;
+  }
+
+
+  .dropdown-item {
+    background-size: 400%;
+    background-image: linear-gradient(to left, rgb(41, 41, 41), #888888, rgb(41, 41, 41));
+    transition: 0.8s;
+    border-radius: 25px;
+    width: 100px;
+    text-align: center;
+    margin-bottom: 3px;
+    color:white ;
+  }
+
+  .dropdown-item:hover {
+    color: #1e2125;
+    background-position: right;
+    box-shadow: 0px 0px 10px #d0d1d1;
+  }
+
+
+  .dropdown-menu {
+    position: absolute;
+    z-index: 1000;
+    display: none;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: transparent;
+    background-clip: padding-box;
+    border: none;
+
+  }
+
+  .carousel-caption1 {
+    position: absolute;
+    right: 3%;
+    bottom: 1.25rem;
+    left: 11%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #000;
+    text-align: left;
+    top: 0%;
+    font-family: cursive
+  }
+
+  .bg-dark {
+    background-image: linear-gradient(291deg, #00093c, #2d0b00);
+    border-top-left-radius: 125px;
+
+  }
+  .bg-dark1 {
+    background-image: linear-gradient(291deg, #5667c9, #2d0b00);
+    
+
+  }
+
+  .container.h-100.p-4 {
+    margin-bottom: -35px;
+  }
+
+  .my-lg-2 {
+    transition: 0.5s;
+  }
+
+  .lispan {
+    transition: 0.2s;
+    text-decoration: none;
+    list-style: none;
+  }
+
+  .lispan {
+    color: rgb(255, 255, 255);
+  }
+
+  .lispan:hover {
+    color: rgb(8, 83, 148);
+    translate: 10px;
+  }
+
+  .my-lg-2:hover {
+    translate: 10px;
+  }
+
+
+  .news {
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+    margin-top: 30px;
+  }
+
+  .news .bi {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+
+  .news input {
+    width: 100%;
+    background: transparent;
+    color: #ccc;
+    border: none;
+    outline: none;
+  }
+
+  .news button {
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .news button .bi {
+    color: #ccc;
+    font-size: 19px;
+  }
+
+.social-icon{
+ align-items: center;
+ justify-content: center;
+  font-size: 33px;
+  margin-left: 30px;
+  
+  cursor: pointer;
+  line-height: 35px;
+}
+ .underline12{
+  width: 100%;
+  height: 5px;
+  background-color: rgb(255, 254, 254);
+  border-radius: 3px;
+ position: sticky;
+ overflow: hidden;
+ }
+
+ .underline12 span{
+  width: 15px;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  border-radius: 3px;
+ position: absolute;
+ top: 0;
+ left: 10px;
+ animation: moving 2s linear infinite;
+ }
+@keyframes moving{
+  0%{
+    left: -20px;
+
+  }
+  100%{
+    left: 100%;
+    
+  }}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark" id="a1">
+        <div class="container-fluid " id="airdown">
+          <a class="navbar-brand" href="#"><img src="img/icon.png" width="130px"  height="30px"></a>
+          <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse   justify-content-center" id="navbarNavDropdown">
+            <ul class="navbar-nav text-light">
+              <li class="nav-item">
+                <a class="nav-link active " aria-current="page" id="under" href="home (1).html">Home</a>
+              </li>
+              <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Sport
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="indoor.html" >Indoor</a></li>
+    
+                  <li><a class="dropdown-item" href="outdoor.html">Outdoor</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " id="under" href="gallery.html">gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="under" href="contect.html ">Contact Us</a>
+              </li>
+    
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <br><br><br><br><br><br>
+      
+    <section class="contaner" style="margin: auto">
+        <header>Feedback Form</header> 
+        <form action="#" class="form">
+          <div class="input-box">
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter full name" required />
+          </div>
+  
+          <div class="input-box">
+            <label>Email Address</label>
+            <input type="text" placeholder="Enter email address" required />
+          </div>
+  
+          <div class="column">
+            <div class="input-box">
+              <label>Phone Number</label>
+              <input type="number" placeholder="Enter phone number" required />
+            </div>
+            <div class="input-box">
+              <label>Birth Date</label>
+              <input type="date" placeholder="Enter birth date" required />
+            </div>
+          </div>
+          <div class="gender-box">
+            <h3>Gender</h3>
+            <div class="gender-option">
+              <div class="gender">
+                <input type="radio" id="check-male" name="gender" checked />
+                <label for="check-male">male</label>
+              </div>
+              <div class="gender">
+                <input type="radio" id="check-female" name="gender" />
+                <label for="check-female">Female</label>
+              </div>
+              <div class="gender">
+                <input type="radio" id="check-other" name="gender" />
+                <label for="check-other">Not to say</label><br>
+              </div>
+            </div>
+          </div>
+  
+  <br><br>
+      <label for="subject">Enter your feedback</label>
+      <textarea id="subject" name="subject" placeholder="feedback here.." style="height:200px"></textarea>
+  
+  
+  
+           <div class="app">
+                  <h1>HOW WAS YOUR EXPERIENCE</h1> 
+              <!-- <p>Please enter your feedback here</p> -->
+            
+              <div class="contaner">
+                <div class="item">
+                  <label for="0">
+                  <input class="radio" type="radio" name="feedback" id="0" value="0">
+                  <span>🤬</span>
+                </label>
+                </div>
+            
+                <div class="item">
+                  <label for="1">
+                  <input class="radio" type="radio" name="feedback" id="1" value="1">
+                  <span>🙁</span>
+                </label>
+                </div>
+            
+                <div class="item">
+                  <label for="2">
+                  <input class="radio" type="radio" name="feedback" id="2" value="2">
+                  <span>😶</span>
+                </label>
+                </div>
+            
+                <div class="item">
+                  <label for="3">
+                  <input class="radio" type="radio" name="feedback" id="3" value="3">
+                  <span>😁</span>
+                </label>
+                </div>
+            
+                <div class="item">
+                  <label for="4">
+                  <input class="radio" type="radio" name="feedback" id="4" value="4">
+                  <span>😍</span>
+                </label>
+                </div>
+            
+              </div>
+            </div> 
+          
+          <button>Submit</button>
+        </form>
+      </section>
+
+  
+      <br><br><br><br><br><br>
+
+      <footer class="bg-dark text-center text-light text-lg-start">
+    
+        <div class="container h-100 p-4">
+          <!--Grid row-->
+          <div class="row mt-3 my-">
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0 ">
+              <h5 class="text-uppercase text-center  "><img src="img/icon.png" width="130px" height="30px"></h5>
+              <p class="fs-6 ">Sports clubs range from organisations  members play together, unpaid, and may play other
+                similar clubs on occasion, watched mostly by family and friends</p>
+    
+            </div>
+            <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0  ">
+              <div class=" d-lg-flex justify-content-center"><i class="bi bi-buildings text-center"></i>
+                <h5 class="text-uppercase mb-0 ">Office <div class="underline12"><span></span></div></h5>
+              </div>
+    
+    
+              <ul class="list-unstyled lh-1 pt-2 ">
+                <li>
+                  <h6 id="airup" >Address</h6>
+                </li>
+                <li>
+                  <P>Zamzama Boulevard , DHA Phase 5, Karachi</P>
+                </li>
+                <li>
+                  <h6>Phone</h6>
+                </li>
+                <li>
+                  <p> (021)37130277</p>
+                </li>
+                <li>
+                  <h6>Email</h6>
+                </li>
+                <li>
+                  <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">Hamzasiddiqui1317@gmail.com</a>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 text-center mb-md-0">
+              <div class="d-lg-flex justify-content-center">
+                <i class="bi bi-link-45deg fs-5"></i>
+                <h5 class="text-uppercase ">Links <div class="underline12"><span></span></div></h5>
+              </div>
+    
+    
+              <ul class="list-unstyled lh-lg my-lg-3 ">
+                <li class="my-lg-2">
+                  <a href="home (1).html"><span class="lispan">Home</span></a>
+                </li>
+                <li class="my-lg-2">
+                  <a href="gallery.html"><span class="lispan">Gallery</span></a>
+                </li>
+                <li class="my-lg-2">
+                  <a href="contect.html"><span class="lispan"> Contact Us</span></a>
+                </li>
+                <li class="my-lg-2">
+                  <a href="feedback.html"><span class="lispan">Feedback</span></a>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <div class="d-lg-flex justify-content-center">
+              <h5 class="text-uppercase">Newsletter <div class="underline12"><span></span></div></h5></div>
+              <form class="news">
+                <i class="bi bi-envelope"></i>
+                <input type="email" placeholder="Enter Your Email " required>
+                <button type="submit"> <i class="bi bi-arrow-right-short"></i></button>
+    
+    
+              </form>
+              <div class="social-icon">
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-pinterest"></i>
+                <i class="bi bi-github"></i>
+                <i class="bi bi-telegram"></i>
+    
+    
+              </div>
+    
+    
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+    
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2020 Copyright-All Rights Reserved   |
+          <a class="text-dark" href="#">Powder by XStak</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+    
+</body>
+</html>
